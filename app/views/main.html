@@ -1,31 +1,35 @@
-
-<!--form, ng-click, uhhh which quadrant task belongs to -->
-
 <div ng-controller="TaskCtrl">
-    <div>
-      <div class="tl">
-        <select size="1" name="impUrgent" id="0" 
-        ng-repeat="task in impUrgent"class="tl">
-        <option>{{task.text}}</option></select>
-      </div>
-  
-      <div class="tr">
-        <select size="1" name="impNotUrgent" id="1" 
-        ng-repeat="task in impNotUrgent"class="tr">
-        <option>{{task.text}}</option></select>
-      </div>
-  
-      <div class="bl">
-        <select size="1" name="unimpUrgent" id="2" 
-        ng-repeat="task in unimpUrgent"class="bl">
-        <option>{{task.text}}</option></select>
-      </div>
-  
-      <div class="br">
-        <select size="1" name="unimpNotUrgent" id="3" 
-        ng-repeat="task in unimpNotUrgent"class="br">
-        <option>{{task.text}}</option></select>
-      </div>
+  <form name="taskForm" ng-submit="save(task)">
+    <div class="lead">What's your task?</div>
+
+    <div class="form-group tl">
+      <input class="form-control" 
+             ng-model="task.imp-urg"
+             placeholder="Important | Urgent">
+             <button type="submit" class="btn btn-info pull-right">
+      Save
+    </button>
     </div>
+
+    <div class="form-group tr">
+      <input class="form-control" 
+             ng-model="task.imp-nou"
+             placeholder="Important | Not Urgent">
+    </div>
+
+    <div class="form-group bl">
+      <input class="form-control" 
+             ng-model="task.uni-urg"
+             placeholder="Unimportant | Urgent">
+    </div>
+
+    <div class="form-group br">
+      <input class="form-control" 
+             ng-model="task.uni-nou"
+             placeholder="Unimportant | Not Urgent">
+    </div>
+
+    
+
   </form>
-  </div>
+</div>
