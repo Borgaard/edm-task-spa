@@ -1,38 +1,31 @@
-<div class="jumbotron">
-  <h1>Boop, Boop!</h1>
-  <p class="lead">
-    what's this
-  </p>
-    what's this
+
 <!--form, ng-click, uhhh which quadrant task belongs to -->
-  <p><a class="btn btn-lg btn-success" 
-    ng-href="#/">Create task! 
-    <span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
 
-
-<div>
-  <div class="tl">
-    <select size="1" name="impUrgent" id="0" 
-    ng-repeat="task in impUrgent"class="tl">
-    <option>{{task.text}}</option></select>
+<div ng-controller="TaskCtrl">
+    <div>
+      <div class="tl">
+        <select size="1" name="impUrgent" id="0" 
+        ng-repeat="task in impUrgent"class="tl">
+        <option>{{task.text}}</option></select>
+      </div>
+  
+      <div class="tr">
+        <select size="1" name="impNotUrgent" id="1" 
+        ng-repeat="task in impNotUrgent"class="tr">
+        <option>{{task.text}}</option></select>
+      </div>
+  
+      <div class="bl">
+        <select size="1" name="unimpUrgent" id="2" 
+        ng-repeat="task in unimpUrgent"class="bl">
+        <option>{{task.text}}</option></select>
+      </div>
+  
+      <div class="br">
+        <select size="1" name="unimpNotUrgent" id="3" 
+        ng-repeat="task in unimpNotUrgent"class="br">
+        <option>{{task.text}}</option></select>
+      </div>
+    </div>
+  </form>
   </div>
-
-  <div class="tr">
-    <select size="1" name="impNotUrgent" id="1" 
-    ng-repeat="task in impNotUrgent"class="tr">
-    <option>{{task.text}}</option></select>
-  </div>
-
-  <div class="bl">
-    <select size="1" name="unimpUrgent" id="2" 
-    ng-repeat="task in unimpUrgent"class="bl">
-    <option>{{task.text}}</option></select>
-  </div>
-
-  <div class="br">
-    <select size="1" name="unimpNotUrgent" id="3" 
-    ng-repeat="task in unimpNotUrgent"class="br">
-    <option>{{task.text}}</option></select>
-  </div>
-</div>
