@@ -1,20 +1,23 @@
 <div>
-  <div ng-controller="TaskCtrl">
+  <div>
     <form name="taskForm" ng-submit="save(task)">
       <div class="lead">What's your task?</div>
 
-      <div class="form-group-btn tl">
+      <div ng-controller="impurgCtrl" class="form-group-btn tl">
         <input class="form-control" 
-               ng-model="task.imp-urg"
+               ng-model="impurg"
+               type="text"
                placeholder="Important | Urgent">
         <span>
-          <button type="button" class="btn btn-default">Save</button>
+          <button ng-click='task()' class="btn btn-default">Save</button>
         </span>
+        <hr>
+        {{taskStatus}}
       </div>
 
       <div class="form-group-btn tr">
         <input class="form-control" 
-               ng-model="task.imp-nou"
+               ng-model="task.impnou"
                placeholder="Important | Not Urgent">
         <span>
           <button type="button" class="btn btn-default">Save</button>
@@ -23,13 +26,13 @@
 
       <div class="form-group bl">
         <input class="form-control" 
-               ng-model="task.uni-urg"
+               ng-model="task.uniurg"
                placeholder="Unimportant | Urgent">
       </div>
 
       <div class="form-group br">
         <input class="form-control" 
-               ng-model="task.uni-nou"
+               ng-model="task.uninou"
                placeholder="Unimportant | Not Urgent">
       </div>
     </form>
