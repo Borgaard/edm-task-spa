@@ -8,17 +8,25 @@
  * Controller of the queueSpangularApp
  */
 angular.module('queueSpangularApp')
-    .controller('impurgCtrl', ['$scope', function ($scope) {
-  	$scope.impurg = '';
-  	$scope.task = function() {
-  		$scope.taskStatus = 'Your important and urgent task is: ' + $scope.impurg + '!';
-  		$scope.impurg = '';
+		.controller('allTaskCtrl', function ($scope, Task) {
+			$scope.tasks = Task;
+		})
+
+    .controller('impurgCtrl', ['$scope', 'Task', function ($scope, Task) {
+    	$scope.newTask = '';
+  		$scope.impurg = Task.impurg;
+  		$scope.task = function() {
+  		$scope.impurg.push({desc: $scope.newTask})
+  		$scope.newTask = '';
   	};
   }])
 
-  .controller('impnouCtrl', ['$scope', function ($scope) {
-  	var impnou = this;
-  	uniurg.task = [];
+  .controller('impnouCtrl', ['$scope', 'Task', function ($scope, Task) {
+  		$scope.impnou = Task.impnou;
+  		$scope.task = function() {
+  		$scope.taskStatus = 'Your important and not urgent task is: ' + $scope.impnou + '!';
+  		$scope.impnou = '';
+  	};
   }])
 
   .controller('uniurgCtrl', ['$scope', function ($scope) {
