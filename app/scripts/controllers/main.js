@@ -7,7 +7,6 @@
  * # MainCtrl
  * Controller of the queueSpangularApp
  */
-
 angular.module('queueSpangularApp')
 		.controller('allTaskCtrl', function ($scope, Task) {
 			$scope.tasks = Task;
