@@ -8,11 +8,7 @@
                ng-model="newTask"
                type="text"
                placeholder="Important | Urgent">
-        <span>
-          <button ng-click='task()' class="btn btn-default">Save</button>
-        </span>
-        <hr>
-        {{taskStatus}}
+        <span><button ng-click='task()' class="btn btn-default">Save</button></span>
         <ul>
           <li ng-repeat="task in impurg">
             {{task.desc}}
@@ -20,25 +16,43 @@
         </ul>
       </div>
 
-      <div class="form-group-btn tr">
+      <div ng-controller="impnouCtrl" class="form-group-btn tr">
         <input class="form-control" 
-               ng-model="task.impnou"
+               ng-model="newTask"
+               type="text"
                placeholder="Important | Not Urgent">
-        <span>
-          <button type="button" class="btn btn-default">Save</button>
-        </span>
+        <span><button ng-click='task()' class="btn btn-default">Save</button></span>
+        <ul>
+          <li ng-repeat="task in impnou">
+            {{task.desc}}
+          </li>
+        </ul>
       </div>
 
-      <div class="form-group bl">
+      <div ng-controller="uniurgCtrl" class="form-group bl">
         <input class="form-control" 
-               ng-model="task.uniurg"
+               ng-model="newTask"
+               type="text"
                placeholder="Unimportant | Urgent">
+        <span><button ng-click='task()' class="btn btn-default">Save</button></span>
+        <ul>
+          <li ng-repeat="task in uniurg">
+            {{task.desc}}
+          </li>
+        </ul>
       </div>
 
-      <div class="form-group br">
+      <div ng-controller="uninouCtrl" class="form-group br">
         <input class="form-control" 
-               ng-model="task.uninou"
+               ng-model="newTask"
+               type="text"
                placeholder="Unimportant | Not Urgent">
+        <span><button ng-click='task()' class="btn btn-default">Save</button></span>
+        <ul>
+          <li ng-repeat="task in uninou">
+            {{task.desc}}
+          </li>
+        </ul>
       </div>
     </form>
   </div>

@@ -16,27 +16,36 @@ angular.module('queueSpangularApp')
     	$scope.newTask = '';
   		$scope.impurg = Task.impurg;
   		$scope.task = function() {
-  		$scope.impurg.push({desc: $scope.newTask})
+  		$scope.impurg.push({desc: $scope.newTask});
   		$scope.newTask = '';
   	};
   }])
 
   .controller('impnouCtrl', ['$scope', 'Task', function ($scope, Task) {
+  		$scope.newTask = '';
   		$scope.impnou = Task.impnou;
   		$scope.task = function() {
-  		$scope.taskStatus = 'Your important and not urgent task is: ' + $scope.impnou + '!';
-  		$scope.impnou = '';
+  		$scope.impnou.push({desc: $scope.newTask});
+  		$scope.newTask = '';
   	};
   }])
 
-  .controller('uniurgCtrl', ['$scope', function ($scope) {
-  	var uniurg = this;
-  	uniurg.task = [];
+  .controller('uniurgCtrl', ['$scope', 'Task', function ($scope, Task) {
+      $scope.newTask = '';
+  		$scope.uniurg = Task.uniurg;
+  		$scope.task = function() {
+  		$scope.uniurg.push({desc: $scope.newTask});
+  		$scope.newTask = '';
+  	};
   }])
 
-  .controller('uninouCtrl', ['$scope', function ($scope) {
-  	var uninou = this;
-  	uniurg.task = [];
+  .controller('uninouCtrl', ['$scope', 'Task', function ($scope, Task) {
+      $scope.newTask = '';
+  		$scope.uninou = Task.uninou;
+  		$scope.task = function() {
+  		$scope.uninou.push({desc: $scope.newTask});
+  		$scope.newTask = '';
+  	};
   }]);
 
   // .controller('TaskCtrl', function ($scope) {
