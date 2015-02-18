@@ -1,35 +1,37 @@
-<div ng-controller="TaskCtrl">
-  <form name="taskForm" ng-submit="save(task)">
-    <div class="lead">What's your task?</div>
+<div>
+  <div ng-controller="TaskCtrl">
+    <form name="taskForm" ng-submit="save(task)">
+      <div class="lead">What's your task?</div>
 
-    <div class="form-group tl">
-      <input class="form-control" 
-             ng-model="task.imp-urg"
-             placeholder="Important | Urgent">
-             <button type="submit" class="btn btn-info pull-right">
-      Save
-    </button>
-    </div>
+      <div class="form-group-btn tl">
+        <input class="form-control" 
+               ng-model="task.imp-urg"
+               placeholder="Important | Urgent">
+        <span>
+          <button type="button" class="btn btn-default">Save</button>
+        </span>
+      </div>
 
-    <div class="form-group tr">
-      <input class="form-control" 
-             ng-model="task.imp-nou"
-             placeholder="Important | Not Urgent">
-    </div>
+      <div class="form-group-btn tr">
+        <input class="form-control" 
+               ng-model="task.imp-nou"
+               placeholder="Important | Not Urgent">
+        <span>
+          <button type="button" class="btn btn-default">Save</button>
+        </span>
+      </div>
 
-    <div class="form-group bl">
-      <input class="form-control" 
-             ng-model="task.uni-urg"
-             placeholder="Unimportant | Urgent">
-    </div>
+      <div class="form-group bl">
+        <input class="form-control" 
+               ng-model="task.uni-urg"
+               placeholder="Unimportant | Urgent">
+      </div>
 
-    <div class="form-group br">
-      <input class="form-control" 
-             ng-model="task.uni-nou"
-             placeholder="Unimportant | Not Urgent">
-    </div>
-
-    
-
-  </form>
+      <div class="form-group br">
+        <input class="form-control" 
+               ng-model="task.uni-nou"
+               placeholder="Unimportant | Not Urgent">
+      </div>
+    </form>
+  </div>
 </div>
