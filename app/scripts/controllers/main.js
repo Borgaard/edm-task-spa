@@ -14,9 +14,9 @@ angular.module('queueSpangularApp')
 
     .controller('impurgCtrl', ['$scope', 'Task', function ($scope, Task) {
     	$scope.newTask = '';
-  		$scope.impurg = Task.impurg;
-  		$scope.task = function() {
-  		$scope.impurg.$add({desc: $scope.newTask});
+  		$scope.task = Task; //points directly to object
+  		$scope.addTask = function() {
+  		Task.impurg.$add({desc: $scope.newTask});
   		$scope.newTask = '';
   	};
   }])
@@ -24,7 +24,7 @@ angular.module('queueSpangularApp')
   .controller('impnouCtrl', ['$scope', 'Task', function ($scope, Task) {
   		$scope.newTask = '';
   		$scope.impnou = Task.impnou;
-  		$scope.task = function() {
+  		$scope.addTask = function() {
   		$scope.impnou.$add({desc: $scope.newTask});
   		$scope.newTask = '';
   	};
@@ -33,7 +33,7 @@ angular.module('queueSpangularApp')
   .controller('uniurgCtrl', ['$scope', 'Task', function ($scope, Task) {
       $scope.newTask = '';
   		$scope.uniurg = Task.uniurg;
-  		$scope.task = function() {
+  		$scope.addTask = function() {
   		$scope.uniurg.$add({desc: $scope.newTask});
   		$scope.newTask = '';
   	};
@@ -42,7 +42,7 @@ angular.module('queueSpangularApp')
   .controller('uninouCtrl', ['$scope', 'Task', function ($scope, Task) {
       $scope.newTask = '';
   		$scope.uninou = Task.uninou;
-  		$scope.task = function() {
+  		$scope.addTask = function() {
   		$scope.uninou.$add({desc: $scope.newTask});
   		$scope.newTask = '';
   	};

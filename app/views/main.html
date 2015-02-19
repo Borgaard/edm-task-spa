@@ -14,14 +14,14 @@
 
           <div class="col-md-2">
             <span>
-              <button ng-click='task()' class="btn btn-default">Save</button>
+              <button ng-click='addTask()' class="btn btn-default">Save</button>
             </span>
           </div>
         </div>
 
           <ul>
-            <li ng-repeat="task in impurg">
-              {{task.desc}}
+            <li ng-repeat="item in task.impurg">
+              {{item.desc}}
             </li>
           </ul>
         </div>
@@ -31,10 +31,10 @@
                  ng-model="newTask"
                  type="text"
                  placeholder="Important | Not Urgent">
-          <span><button ng-click='task()' class="btn btn-default">Save</button></span>
+          <span><button ng-click='addTask()' class="btn btn-default">Save</button></span>
           <ul>
-            <li ng-repeat="task in impnou">
-              {{task.desc}}
+            <li ng-repeat="item in impnou">
+              {{item.desc}}
             </li>
           </ul>
         </div>
@@ -44,10 +44,10 @@
                  ng-model="newTask"
                  type="text"
                  placeholder="Unimportant | Urgent">
-          <span><button ng-click='task()' class="btn btn-default">Save</button></span>
+          <span><button ng-click='addTask()' class="btn btn-default">Save</button></span>
           <ul>
-            <li ng-repeat="task in uniurg">
-              {{task.desc}}
+            <li ng-repeat="item in uniurg">
+              {{item.desc}}
             </li>
           </ul>
         </div>
@@ -57,10 +57,10 @@
                  ng-model="newTask"
                  type="text"
                  placeholder="Unimportant | Not Urgent">
-          <span><button ng-click='task()' class="btn btn-default">Save</button></span>
+          <span><button ng-click='addTask()' class="btn btn-default">Save</button></span>
           <ul>
-            <li ng-repeat="task in uninou">
-              {{task.desc}}
+            <li ng-repeat="item in uninou">
+              {{item.desc}}
             </li>
           </ul>
         </div>
