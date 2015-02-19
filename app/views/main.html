@@ -33,7 +33,7 @@
                  placeholder="Important | Not Urgent">
           <span><button ng-click='addTask()' class="btn btn-default">Save</button></span>
           <ul>
-            <li ng-repeat="item in impnou">
+            <li ng-repeat="item in task.impnou">
               {{item.desc}}
             </li>
           </ul>
@@ -46,7 +46,7 @@
                  placeholder="Unimportant | Urgent">
           <span><button ng-click='addTask()' class="btn btn-default">Save</button></span>
           <ul>
-            <li ng-repeat="item in uniurg">
+            <li ng-repeat="item in task.uniurg">
               {{item.desc}}
             </li>
           </ul>
@@ -59,7 +59,7 @@
                  placeholder="Unimportant | Not Urgent">
           <span><button ng-click='addTask()' class="btn btn-default">Save</button></span>
           <ul>
-            <li ng-repeat="item in uninou">
+            <li ng-repeat="item in task.uninou">
               {{item.desc}}
             </li>
           </ul>

@@ -38,10 +38,10 @@ angular.module('queueSpangularApp')
 	var uniurgSync = $firebase(uniurgRef);
 	var uninouSync = $firebase(uninouRef);  
 
-				eachTaskInEachQuadrant.impurg = impurgSync.$asArray(),
-				eachTaskInEachQuadrant.impnou = impnouSync.$asArray(),
-				eachTaskInEachQuadrant.uniurg = uniurgSync.$asArray(),
-				eachTaskInEachQuadrant.uninou = uninouSync.$asArray()
+	eachTaskInEachQuadrant.impurg = impurgSync.$asArray(),
+	eachTaskInEachQuadrant.impnou = impnouSync.$asArray(),
+	eachTaskInEachQuadrant.uniurg = uniurgSync.$asArray(),
+	eachTaskInEachQuadrant.uninou = uninouSync.$asArray()
 	  }
 	});
 

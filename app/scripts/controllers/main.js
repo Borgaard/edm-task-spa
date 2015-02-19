@@ -23,27 +23,27 @@ angular.module('queueSpangularApp')
 
   .controller('impnouCtrl', ['$scope', 'Task', function ($scope, Task) {
   		$scope.newTask = '';
-  		$scope.impnou = Task.impnou;
+  		$scope.task = Task;
   		$scope.addTask = function() {
-  		$scope.impnou.$add({desc: $scope.newTask});
+  		Task.impnou.$add({desc: $scope.newTask});
   		$scope.newTask = '';
   	};
   }])
 
   .controller('uniurgCtrl', ['$scope', 'Task', function ($scope, Task) {
       $scope.newTask = '';
-  		$scope.uniurg = Task.uniurg;
+  		$scope.task = Task;
   		$scope.addTask = function() {
-  		$scope.uniurg.$add({desc: $scope.newTask});
+  		Task.uniurg.$add({desc: $scope.newTask});
   		$scope.newTask = '';
   	};
   }])
 
   .controller('uninouCtrl', ['$scope', 'Task', function ($scope, Task) {
       $scope.newTask = '';
-  		$scope.uninou = Task.uninou;
+  		$scope.task = Task;
   		$scope.addTask = function() {
-  		$scope.uninou.$add({desc: $scope.newTask});
+  		Task.uninou.$add({desc: $scope.newTask});
   		$scope.newTask = '';
   	};
   }]);
