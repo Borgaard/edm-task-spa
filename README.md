@@ -1,6 +1,6 @@
 # visitask MVP
 --
-###Visually prioritize your tasks
+####Visually prioritize your tasks, based on the Eisenhower Decision Matrix
 
 ![quicklook](http://i.imgur.com/Zm462l2.png)
 
