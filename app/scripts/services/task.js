@@ -20,11 +20,11 @@ angular.module('queueSpangularApp')
 	//	$asObject creates sync object, then $bindTo() binds to $scope variable
 	// syncObject.$bindTo($scope, 'data');
 	
-	var task = {
+	var eachTaskInEachQuadrant = {
 				impurg: impurgSync.$asArray(),
 				impnou: impnouSync.$asArray(),
 				uniurg: uniurgSync.$asArray(),
 				uninou: uninouSync.$asArray()
 		};
-	return task;
+	return eachTaskInEachQuadrant;
 }]);
