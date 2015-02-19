@@ -16,7 +16,7 @@ angular.module('queueSpangularApp')
     	$scope.newTask = '';
   		$scope.impurg = Task.impurg;
   		$scope.task = function() {
-  		$scope.impurg.push({desc: $scope.newTask});
+  		$scope.impurg.$add({desc: $scope.newTask});
   		$scope.newTask = '';
   	};
   }])
@@ -25,7 +25,7 @@ angular.module('queueSpangularApp')
   		$scope.newTask = '';
   		$scope.impnou = Task.impnou;
   		$scope.task = function() {
-  		$scope.impnou.push({desc: $scope.newTask});
+  		$scope.impnou.$add({desc: $scope.newTask});
   		$scope.newTask = '';
   	};
   }])
@@ -34,7 +34,7 @@ angular.module('queueSpangularApp')
       $scope.newTask = '';
   		$scope.uniurg = Task.uniurg;
   		$scope.task = function() {
-  		$scope.uniurg.push({desc: $scope.newTask});
+  		$scope.uniurg.$add({desc: $scope.newTask});
   		$scope.newTask = '';
   	};
   }])
@@ -43,7 +43,7 @@ angular.module('queueSpangularApp')
       $scope.newTask = '';
   		$scope.uninou = Task.uninou;
   		$scope.task = function() {
-  		$scope.uninou.push({desc: $scope.newTask});
+  		$scope.uninou.$add({desc: $scope.newTask});
   		$scope.newTask = '';
   	};
   }]);
