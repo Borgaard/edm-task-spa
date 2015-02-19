@@ -3,6 +3,15 @@
 angular.module('queueSpangularApp')
 
 .factory('Task', ['$firebase', function ($firebase) {
+	var ref = new Firebase("https://visitask.firebaseio.com");
+	ref.authWithOAuthPopup("google", function(error, authData) {
+	  if (error) {
+	    console.log("Login Failed!", error);
+	  } else {
+	    console.log("Authenticated successfully with payload:", authData);
+	  }
+	});
+
 	var impurgRef = new Firebase('https://visitask.firebaseio.com/impurg');
 	var impnouRef = new Firebase('https://visitask.firebaseio.com/impnou');
 	var uniurgRef = new Firebase('https://visitask.firebaseio.com/uniurg');

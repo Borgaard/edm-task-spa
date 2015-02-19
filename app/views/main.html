@@ -6,11 +6,19 @@
         <div class="lead">What's your task?</div>
 
         <div ng-controller="impurgCtrl" class="form-group-btn tl">
-          <input class="form-control" 
-                 ng-model="newTask"
-                 type="text"
-                 placeholder="Important | Urgent">
-          <span><button ng-click='task()' class="btn btn-default">Save</button></span>
+          <div class="row">
+            <div class="col-md-10">
+              <input class="form-control" ng-model="newTask"
+                     type="text" placeholder="Important | Urgent">
+            </div>
+
+          <div class="col-md-2">
+            <span>
+              <button ng-click='task()' class="btn btn-default">Save</button>
+            </span>
+          </div>
+        </div>
+
           <ul>
             <li ng-repeat="task in impurg">
               {{task.desc}}
