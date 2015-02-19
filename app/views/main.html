@@ -3,22 +3,15 @@
   <body ng-controller="allTaskCtrl">
     <div>
       <form name="taskForm" ng-submit="save(task)">
-        <div class="lead">What's your task?</div>
 
         <div ng-controller="impurgCtrl" class="form-group-btn tl">
-          <div class="row">
-            <div class="col-md-10">
-              <input class="form-control" ng-model="newTask"
-                     type="text" placeholder="Important | Urgent">
-            </div>
-
-          <div class="col-md-2">
-            <span>
-              <button ng-click='addTask()' class="btn btn-default">Save</button>
-            </span>
-          </div>
-        </div>
-
+          <input class="form-control" 
+                 ng-model="newTask" 
+                 type="text" 
+                 placeholder="Important | Urgent">
+          <span>
+            <button ng-click='addTask()' class="btn btn-default">Save</button>
+          </span>
           <ul>
             <li ng-repeat="item in task.impurg">
               {{item.desc}}
@@ -31,7 +24,9 @@
                  ng-model="newTask"
                  type="text"
                  placeholder="Important | Not Urgent">
-          <span><button ng-click='addTask()' class="btn btn-default">Save</button></span>
+          <span>
+            <button ng-click='addTask()' class="btn btn-default">Save</button>
+          </span>
           <ul>
             <li ng-repeat="item in task.impnou">
               {{item.desc}}
@@ -39,12 +34,14 @@
           </ul>
         </div>
 
-        <div ng-controller="uniurgCtrl" class="form-group bl">
+        <div ng-controller="uniurgCtrl" class="form-group-btn bl">
           <input class="form-control" 
                  ng-model="newTask"
                  type="text"
                  placeholder="Unimportant | Urgent">
-          <span><button ng-click='addTask()' class="btn btn-default">Save</button></span>
+          <span>
+            <button ng-click='addTask()' class="btn btn-default">Save</button>
+          </span>
           <ul>
             <li ng-repeat="item in task.uniurg">
               {{item.desc}}
@@ -52,12 +49,14 @@
           </ul>
         </div>
 
-        <div ng-controller="uninouCtrl" class="form-group br">
+        <div ng-controller="uninouCtrl" class="form-group-btn br">
           <input class="form-control" 
                  ng-model="newTask"
                  type="text"
                  placeholder="Unimportant | Not Urgent">
-          <span><button ng-click='addTask()' class="btn btn-default">Save</button></span>
+          <span>
+            <button ng-click='addTask()' class="btn btn-default">Save</button>
+          </span>
           <ul>
             <li ng-repeat="item in task.uninou">
               {{item.desc}}
