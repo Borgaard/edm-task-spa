@@ -15,7 +15,7 @@ angular.module('queueSpangularApp')
     .controller('impurgCtrl', ['$scope', 'Task', function ($scope, Task) {
     	$scope.newTask = '';
   		$scope.task = Task; //points directly to object
-  		$scope.addTask = function() {
+  		$scope.addTask = function() { //for current user with session, add new task to this quadrant
   		Task.impurg.$add({desc: $scope.newTask});
   		$scope.newTask = '';
   	};
