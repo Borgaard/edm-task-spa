@@ -22,6 +22,7 @@ angular.module('queueSpangularApp')
 				uninou: uninouSync.$asArray()
 		};
 
+
 	var ref = new Firebase('https://visitask.firebaseio.com');
 	ref.authWithOAuthPopup('google', function(error, authData) {
 	  if (error) {
@@ -43,6 +44,12 @@ angular.module('queueSpangularApp')
 			eachTaskInEachQuadrant.impnou = impnouSync.$asArray(),
 			eachTaskInEachQuadrant.uniurg = uniurgSync.$asArray(),
 			eachTaskInEachQuadrant.uninou = uninouSync.$asArray();
+
+
+			eachTaskInEachQuadrant.delete = function(quadrantID, item) {
+				console.log(quadrantID, item);
+				eachTaskInEachQuadrant[quadrantID].$remove(item);
+			};
 	  }
 	});	
 	return eachTaskInEachQuadrant;

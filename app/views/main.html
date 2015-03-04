@@ -15,6 +15,8 @@
           <ul>
             <li ng-repeat="item in task.impurg">
               {{item.desc}}
+              <i class="glyphicon glyphicon-remove-sign" ng-click="task.delete('impurg', item)"></i>
+
             </li>
           </ul>
         </div>
@@ -30,6 +32,7 @@
           <ul>
             <li ng-repeat="item in task.impnou">
               {{item.desc}}
+              <i class="glyphicon glyphicon-remove-sign" ng-click="task.delete('impnou', item)"></i>
             </li>
           </ul>
         </div>
@@ -45,6 +48,7 @@
           <ul>
             <li ng-repeat="item in task.uniurg">
               {{item.desc}}
+              <i class="glyphicon glyphicon-remove-sign" ng-click="task.delete('uniurg', item)"></i>
             </li>
           </ul>
         </div>
@@ -60,6 +64,7 @@
           <ul>
             <li ng-repeat="item in task.uninou">
               {{item.desc}}
+              <i class="glyphicon glyphicon-remove-sign" ng-click="task.delete('uninou', item)"></i>
             </li>
           </ul>
         </div>
