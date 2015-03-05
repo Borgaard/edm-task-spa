@@ -10,12 +10,13 @@
                  type="text" 
                  placeholder="Important | Urgent">
           <span>
-            <button ng-click='addTask()' class="btn btn-default">Save</button>
+            <button ng-click='addTask()' class="btn btn-default">Save task</button>
+          <hr>
           </span>
           <ul>
             <li ng-repeat="item in task.impurg">
-              {{item.desc}}
-              <i class="glyphicon glyphicon-remove-sign" ng-click="task.delete('impurg', item)"></i>
+              {{item.desc}} |
+              <i class="glyphicon glyphicon-remove" ng-click="task.delete('impurg', item)"></i>
 
             </li>
           </ul>
@@ -27,12 +28,13 @@
                  type="text"
                  placeholder="Important | Not Urgent">
           <span>
-            <button ng-click='addTask()' class="btn btn-default">Save</button>
+            <button ng-click='addTask()' class="btn btn-default">Save task</button>
+          <hr>
           </span>
           <ul>
             <li ng-repeat="item in task.impnou">
-              {{item.desc}}
-              <i class="glyphicon glyphicon-remove-sign" ng-click="task.delete('impnou', item)"></i>
+              {{item.desc}} |
+              <i class="glyphicon glyphicon-remove" ng-click="task.delete('impnou', item)"></i>
             </li>
           </ul>
         </div>
@@ -43,12 +45,13 @@
                  type="text"
                  placeholder="Unimportant | Urgent">
           <span>
-            <button ng-click='addTask()' class="btn btn-default">Save</button>
+            <button ng-click='addTask()' class="btn btn-default">Save task</button>
+          <hr>
           </span>
           <ul>
             <li ng-repeat="item in task.uniurg">
-              {{item.desc}}
-              <i class="glyphicon glyphicon-remove-sign" ng-click="task.delete('uniurg', item)"></i>
+              {{item.desc}} |
+              <i class="glyphicon glyphicon-remove" ng-click="task.delete('uniurg', item)"></i>
             </li>
           </ul>
         </div>
@@ -59,12 +62,13 @@
                  type="text"
                  placeholder="Unimportant | Not Urgent">
           <span>
-            <button ng-click='addTask()' class="btn btn-default">Save</button>
+            <button ng-click='addTask()' class="btn btn-default">Save task</button>
           </span>
+          <hr>
           <ul>
             <li ng-repeat="item in task.uninou">
-              {{item.desc}}
-              <i class="glyphicon glyphicon-remove-sign" ng-click="task.delete('uninou', item)"></i>
+              {{item.desc}} |
+              <i class="glyphicon glyphicon-remove" ng-click="task.delete('uninou', item)"></i>
             </li>
           </ul>
         </div>
